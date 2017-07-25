@@ -15,8 +15,8 @@ When(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, value|
   fill_in(field, :with => value)
 end
 
-When(/^I click "([^"]*)" button$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I click "([^"]*)" button$/) do |button|
+  click_button('Create Article')
 end
 
 Then(/^I should be on "([^"]*)" page$/) do |arg1|
