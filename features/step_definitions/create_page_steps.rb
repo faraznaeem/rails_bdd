@@ -19,6 +19,7 @@ When(/^I click "([^"]*)" button$/) do |button|
   click_button('Create Article')
 end
 
-Then(/^I should be on "([^"]*)" page$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should be on "([^"]*)" page$/) do |article_title|
+  article = Article.find_by(title: article_title)
+  expect(page).to have_current_path("/article/#{article.id}")
 end
